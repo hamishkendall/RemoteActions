@@ -4,9 +4,9 @@ import type {PropsWithChildren} from 'react';
 type SectionProps = PropsWithChildren<{
     title: string;
     action: () => void;
-  }>;
+}>;
 
-const ActionSection = ({title, action}: SectionProps) => {
+const ActionItem = ({title, action}: SectionProps) => {
 
     return (
         <View
@@ -18,11 +18,9 @@ const ActionSection = ({title, action}: SectionProps) => {
                 onPress={action}>
 
                 <Text style={styles.touchableOpacityText}>Run</Text>
-
             </TouchableOpacity>
-    
         </View>
-      );
+    );
 }
 
 const styles = StyleSheet.create({
@@ -51,4 +49,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ActionSection;
+export default ActionItem;
