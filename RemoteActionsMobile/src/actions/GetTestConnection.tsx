@@ -1,4 +1,4 @@
-const GetTestData = async () => {
+const GetTestConnection = async () => {
     try {
         const response = await fetch(
           'http://192.168.1.222:8082/action',
@@ -8,4 +8,4 @@ const GetTestData = async () => {
     }
 }
 
-export default GetTestData;
+export default GetTestConnection;

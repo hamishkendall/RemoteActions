@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: '#FFFFFF',
         textAlign: 'center',
+        textAlignVertical: 'center',
         paddingRight: 25,
     },
     touchableOpacity: {
@@ -43,9 +44,11 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
     touchableOpacityText: {
+        flex: 1,
         fontSize: 23,
         color: '#FFFFFF',
-        textAlign: 'center'
+        textAlign: 'center',
+        textAlignVertical: 'center',
     }
 });
 

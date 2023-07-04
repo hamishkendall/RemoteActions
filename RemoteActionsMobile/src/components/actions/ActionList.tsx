@@ -1,13 +1,17 @@
 import {StyleSheet,View} from 'react-native';
 import ActionItem from './ActionItem';
 import ShutdownPC from '../../actions/ShutdownPC';
-import GetTestData from '../../actions/GetTestData';
+import GetTestConnection from '../../actions/GetTestConnection';
+import PostTest from '../../actions/PostTest';
+import TeapotPost from '../../actions/TepotPost';
 
 const ActionList = () => {
     return(
         <View style={styles.container}>
-            <ActionItem title="Get Test Data" action={GetTestData} />
+            <ActionItem title="Test Connection" action={GetTestConnection} />
+            <ActionItem title="Test Post" action={PostTest} />
             <ActionItem title="Shutdown PC" action={ShutdownPC} />
+            <ActionItem title="Teapot Response" action={TeapotPost} />
         </View>
     );
 }

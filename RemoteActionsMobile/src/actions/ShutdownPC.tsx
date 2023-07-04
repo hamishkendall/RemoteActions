@@ -1,5 +1,9 @@
+import ActionType from "./ActionType";
+import ActionPostRequest from "./ActionPostRequest";
+
+
 const ShutdownPC = () => {
-    console.log('Simulated shutting down pc');
+    ActionPostRequest('Shutdown', ActionType.Shutdown);
 }
 
 export default ShutdownPC;

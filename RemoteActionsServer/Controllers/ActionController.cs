@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RemoteActionsServer.Models;
 
 namespace RemoteActionsServer.Controllers
 {
@@ -13,10 +14,21 @@ namespace RemoteActionsServer.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetTestData")]
-        public ActionResult Get()
+        [HttpGet(Name = "TestConnection")]
+        public IActionResult Get()
         {
-            return Ok("Test Data");
+            return Ok();
+        }
+
+        [HttpPost(Name = "RunAction")]
+        public IActionResult Post([FromBody] RemoteActionModel model)
+        {
+            if(model.AuthToken != "TEMPTOKEN")
+                return Unauthorized();
+
+            int result = ActionExecutor.Execute(model.Action);
+
+            return StatusCode(result);
         }
     }
 }
