@@ -17,3 +17,4 @@ A basic React Native app frontend with a basic .NetCore API backend that runs ac
 - Add proper security to allow app to run actions over internet
 - Allow app to work over internet
 - Add ActivityIndicator while waiting for requests 
+- Update mobile UI to look better
