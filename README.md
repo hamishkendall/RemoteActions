@@ -10,7 +10,7 @@ A basic React Native app frontend with a basic .NetCore API backend that runs ac
 
 ---
 ## To-Do:
-~~- Add ActivityIndicator while waiting for requests~~
+- ~~Add ActivityIndicator while waiting for requests~~
 - Add more actions
 - Add login features to the settings page
 - Add ability to change request address
