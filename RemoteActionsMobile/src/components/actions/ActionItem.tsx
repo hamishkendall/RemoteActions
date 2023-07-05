@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, ActivityIndicator} from 'react-native';
 import type {PropsWithChildren} from 'react';
 
+
 type SectionProps = PropsWithChildren<{
     title: string;
     action: () => void;
@@ -32,6 +33,7 @@ const ActionItem = ({title, action}: SectionProps) => {
         </View>
     );
 }
+
 
 const styles = StyleSheet.create({
     container: {

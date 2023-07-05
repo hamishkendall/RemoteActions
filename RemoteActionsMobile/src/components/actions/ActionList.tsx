@@ -1,10 +1,8 @@
 import {StyleSheet,View} from 'react-native';
 import ActionItem from './ActionItem';
-import ShutdownPC from '../../actions/ShutdownPC';
 import GetTestConnection from '../../actions/GetTestConnection';
-import PostTest from '../../actions/PostTest';
-import TeapotPost from '../../actions/TepotPost';
-import RestartPC from '../../actions/RestartPC';
+import {PostTest, ShutdownPC, RestartPC} from '../../actions/PostActions';
+
 
 const ActionList = () => {
     return(
@@ -16,6 +14,7 @@ const ActionList = () => {
         </View>
     );
 }
+
 
 const styles = StyleSheet.create({
     container: {
