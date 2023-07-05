@@ -5,6 +5,6 @@
         Teapot,
         Test,
         Shutdown,
-        Restart
+        Restart,
     }
 }

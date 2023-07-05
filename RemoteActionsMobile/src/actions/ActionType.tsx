@@ -2,7 +2,7 @@ enum ActionType {
     Teapot,
     Test,
     Shutdown,
-    Restart
+    Restart,
 }
 
 export default ActionType;
