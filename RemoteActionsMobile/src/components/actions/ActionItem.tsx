@@ -1,4 +1,5 @@
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, TouchableOpacity, StyleSheet, ActivityIndicator} from 'react-native';
 import type {PropsWithChildren} from 'react';
 
 type SectionProps = PropsWithChildren<{
@@ -8,16 +9,25 @@ type SectionProps = PropsWithChildren<{
 
 const ActionItem = ({title, action}: SectionProps) => {
 
+    const [isLoading, setIsLoading] = useState(false);
+
+    async function RunAction(){
+        setIsLoading(true);
+        await action();
+        setIsLoading(false);
+    }
+
     return (
         <View
           style={styles.container}>
-    
             <Text style={styles.title}>{title}</Text>
-            <TouchableOpacity 
+            <TouchableOpacity
+                disabled = {isLoading}
                 style={styles.touchableOpacity}
-                onPress={action}>
+                onPress={() => isLoading ? '' : RunAction()}>
 
-                <Text style={styles.touchableOpacityText}>Run</Text>
+                {isLoading ? <ActivityIndicator size="large" color="#0000ff" style={styles.activityIndicator} /> : ''}
+                {isLoading ? '' : <Text style={styles.touchableOpacityText}>Run</Text>}
             </TouchableOpacity>
         </View>
     );
@@ -43,10 +53,20 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255,255,255,0.3)',
         borderRadius: 5
     },
+    touchableOpacityDisabled: {
+        flex: 1,
+        backgroundColor: 'rgba(255,255,255,0.3)',
+        borderRadius: 5
+    },
     touchableOpacityText: {
         flex: 1,
         fontSize: 23,
         color: '#FFFFFF',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+    },
+    activityIndicator: {
+        flex: 1,
         textAlign: 'center',
         textAlignVertical: 'center',
     }

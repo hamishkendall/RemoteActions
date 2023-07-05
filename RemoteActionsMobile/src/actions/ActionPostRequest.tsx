@@ -26,7 +26,6 @@ const ActionPostRequest = async (actionTitle: string, action: ActionType) => {
         ]);
         
         Alert.alert('Action Result: '+response.status, actionTitle + ' completed!');
-
     } catch (error) {
         Alert.alert('Action Result Failed', actionTitle + ' Failed! \n' + error)
     }
