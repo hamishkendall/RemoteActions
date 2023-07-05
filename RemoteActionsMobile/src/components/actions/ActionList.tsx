@@ -4,6 +4,7 @@ import ShutdownPC from '../../actions/ShutdownPC';
 import GetTestConnection from '../../actions/GetTestConnection';
 import PostTest from '../../actions/PostTest';
 import TeapotPost from '../../actions/TepotPost';
+import RestartPC from '../../actions/RestartPC';
 
 const ActionList = () => {
     return(
@@ -11,7 +12,7 @@ const ActionList = () => {
             <ActionItem title="Test Connection" action={GetTestConnection} />
             <ActionItem title="Test Post" action={PostTest} />
             <ActionItem title="Shutdown PC" action={ShutdownPC} />
-            <ActionItem title="Teapot Response" action={TeapotPost} />
+            <ActionItem title="Restart PC" action={RestartPC} />
         </View>
     );
 }

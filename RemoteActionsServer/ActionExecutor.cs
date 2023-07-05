@@ -10,6 +10,7 @@ namespace RemoteActionsServer
             {
                 case ActionType.Test: return Test();
                 case ActionType.Shutdown: return ShutdownPC();
+                case ActionType.Restart: return RestartPC();
 
                 default: return StatusCodes.Status418ImATeapot;
             }
@@ -24,6 +25,15 @@ namespace RemoteActionsServer
         {
             //shutdown the pc after 15 seconds
             string strCmdText = "/C shutdown /s /t 15 /c \"Remote Action Shutdown.\"";
+            System.Diagnostics.Process.Start("CMD.exe", strCmdText);
+
+            return StatusCodes.Status200OK;
+        }
+
+        private static int RestartPC()
+        {
+            //restart the pc after 15 seconds
+            string strCmdText = "/C shutdown /r /t 15 /c \"Remote Action Restart.\"";
             System.Diagnostics.Process.Start("CMD.exe", strCmdText);
 
             return StatusCodes.Status200OK;

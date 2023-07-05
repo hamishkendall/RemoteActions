@@ -4,6 +4,7 @@
     {
         Teapot,
         Test,
-        Shutdown
+        Shutdown,
+        Restart
     }
 }
