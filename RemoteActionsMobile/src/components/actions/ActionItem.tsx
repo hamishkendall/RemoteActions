@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, ActivityIndicator} from 'react-native';
 import type {PropsWithChildren} from 'react';
+import {View, Text, TouchableOpacity, StyleSheet, ActivityIndicator} from 'react-native';
 
 
 type SectionProps = PropsWithChildren<{

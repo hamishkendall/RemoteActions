@@ -6,7 +6,7 @@ import NavBar from './src/components/nav/NavBar';
 
 
 const App = () => {
-  const [viewIndex, setViewIndex] = useState(0);
+  const [viewIndex, setViewIndex] = useState(1);
   const mainContent = GetMainContent();
 
   function GetMainContent(){
