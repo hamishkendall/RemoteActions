@@ -15,7 +15,8 @@ A basic React Native app frontend with a basic .NetCore API backend that runs ac
 - Add login features to the settings page
 - ~~Add ability to change request address~~
 - ~~Add ability to enter password~~
-- ~~Passowrd saved so not needed to enter every time app opened~~
+- ~~Password saved so not needed to enter every time app opened~~
+- Use the stored IP and Token with the requests
 - Add Test connection to settings - with password check
 - Add proper security to allow app to run actions over internet
 - Allow app to work over internet
